@@ -17,6 +17,7 @@ const markButton = document.querySelector("#mark-button");
 
 const unopenMessage = document.querySelector("#close");
 
+const igorElement = document.querySelector("#igor")
 
 
 // FUNCTIONS
@@ -51,6 +52,22 @@ const closeMessageFunction = () => {
     markButton.classList.add("hidden");
 }   
 
+const markasUnread = () => {
+    inboxMessageElement.classList.remove("is-read");
+    markButton.classList.add("hidden");
+    inboxMessage.classList.add("hidden");
+
+}
+
+
+const igorFunction = () => {
+    igorElement.classList.toggle("igor");
+}
+
+const toggleSubheadingColor = () => {
+    date.classList.toggle("black-text");
+}
+
 // EVENT LISTENERS
 inbox.addEventListener("click", changeFontColor);
 date.addEventListener("click", changeFontColor);
@@ -59,3 +76,6 @@ sendMessage.addEventListener("click", sendReply);
 cancelMessage.addEventListener("click", cancelReply);
 openMessage.addEventListener("click", openMessageFunction);
 unopenMessage.addEventListener("click", closeMessageFunction);
+markButton.addEventListener("click", markasUnread);
+date.addEventListener("click", igorFunction);
+date.addEventListener("click", toggleSubheadingColor);

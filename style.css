@@ -33,6 +33,12 @@ body {
   color: blue;
 } 
 
+
+.black-text {
+  color: black;
+}
+
+
 .is-read {
   background-color: #dddddd !important;
 }
@@ -43,4 +49,9 @@ body {
 
 .hidden {
   display: none;
+}
+
+.igor{
+  color: purple;
+  text-decoration: underline;
 }
